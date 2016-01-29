@@ -22,5 +22,5 @@ $("#main").append(bio.role);
 $("#main").append(bio.contacts);
 $("#main").append(bio.bioPic);
 $("#main").append(bio.welcomeMessage);
-$("#main").append(bio.skills);
+$("#main").append(bio.skill);
 
