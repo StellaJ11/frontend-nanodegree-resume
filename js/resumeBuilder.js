@@ -17,7 +17,7 @@ var bio = {
 	},
 	"bioPic": "images/me.jpg ",
 	"welcomeMsg": "Hello there!",
-	"skills": "awesomeness"
+	"skills": "awesomeness, creativeness, hardworking"
 };
 
 var formattedMobile = HTMLmobile.replace ("%data%", bio.contacts.mobile);
@@ -34,8 +34,8 @@ $("#header").append(HTMLskillsStart);
 $("#header").append(formattedskills);
 
 
-var workExperience = {
-	"experiences": [
+var work = {
+	"jobs": [
 	{
 		"employer": "Smartling",
 		"title": "Digital Marketing Intern",
@@ -68,12 +68,12 @@ var workExperience = {
 };
 
 $("#workExperience").append(HTMLworkStart);
-for (experience in workExperience.experiences)  {
-			var formattedEmployer = HTMLworkEmployer.replace ("%data%", workExperience.experiences[experience].employer);
-			var formattedTitle = HTMLworkTitle.replace ("%data%", workExperience.experiences[experience].title);
-			var formattedworkDates = HTMLworkDates.replace ("%data%", workExperience.experiences[experience].date);
-			var formattedworkLocation =  HTMLworkLocation.replace ("%data%", workExperience.experiences[experience].location);
-			var formattedDescription = HTMLworkDescription.replace ("%data%", workExperience.experiences[experience].description);
+for (job in work.jobs)  {
+			var formattedEmployer = HTMLworkEmployer.replace ("%data%", work.jobs[job].employer);
+			var formattedTitle = HTMLworkTitle.replace ("%data%", work.jobs[job].title);
+			var formattedworkDates = HTMLworkDates.replace ("%data%", work.jobs[job].date);
+			var formattedworkLocation =  HTMLworkLocation.replace ("%data%", work.jobs[job].location);
+			var formattedDescription = HTMLworkDescription.replace ("%data%", work.jobs[job].description);
 			$(".work-entry").append(formattedEmployer + formattedTitle + formattedworkDates + formattedworkLocation + formattedDescription);
 	}
 
@@ -101,10 +101,23 @@ var education = {
 	], 
 	"onlineCourses": [
 		{
+			"title": "Intro to HTML and CSS",
+			"school": "Udacity",
+			"date": "2016",
+			"url": "https://www.udacity.com/course/viewer#!/c-ud304"
+
+		},
+		{
 		 	"title": "JavaScript Syntax",
 		 	"school": "Udacity",
 		 	"date": "2016",
 		 	"url": "http://www.udacity.com/course/ud804"
+		},
+		{
+			"title": "How to Use Git and GitHub",
+			"school": "Udacity",
+			"date": "2016",
+			"url": "https://www.udacity.com/course/viewer#!/c-ud775"
 		}
 	]
 };
@@ -115,7 +128,7 @@ var education = {
 			var formattedDegree = HTMLschoolDegree.replace ("%data%", education.schools[school].degree);
 			var formattedDates = HTMLschoolDates.replace ("%data%", education.schools[school].date);
 			var formattedLocation =  HTMLschoolLocation.replace ("%data%", education.schools[school].location);
-			var formattedMajor = HTMLschoolMajor.replace ("%data%", education.schools[school].major);
+			var formattedMajor = HTMLschoolMajor.replace ("%data%", education.schools[school].major); 
 			$(".education-entry").append(formattedName + formattedDegree + formattedDates + formattedLocation + formattedMajor);
 	}
 
