@@ -39,9 +39,30 @@ var workExperience = {
 	{
 		"employer": "Smartling",
 		"title": "Digital Marketing Intern",
-		"Date": "06/15-12/15",
-		"location": "New York, NY",
-		"description": "• Managed various social media channels: Twitter, Facebook, LinkedIn, Google+ and You-Tube"
+		"date": "06/15-12/15",
+		"location": "New York, NY, USA",
+		"description": "• Managed various social media channels: Twitter, Facebook, LinkedIn, Google+ and You-Tube; in 5 months, the number of Twitter followers has been increased by 46.8% with 1,032 new followers; the number of Twitter engagements has been increased by 480.2% and the conversion rate from social media has been increased by 715.13%"
+	},
+	{
+		"employer": "justclickforkids.com",
+		"title": "Digital Marketing Intern",
+		"date": "09/14-01/15",
+		"location": "Hicksville, NY, USA",
+		"description": "• Analyzed traffic patterns, executed organic keyword research and conducted SEO keyword strategies to improve website traffic and increase keyword ranking using Google Analytics and Google Webmaster Tools"
+	},
+	{
+		"employer": "Ciklum",
+		"title": "Business Development Intern",
+		"date": "10/14-12/14",
+		"location": "New York, NY, USA",
+		"description": "• Used Google Apps, Excel • and SugarCRM to conduct vital customer research; leads generated were increased by 25% in 2 months"
+	},
+	{
+		"employer": "Hofstra University",
+		"title": "Research Assistant",
+		"date": "02/14-12/14",
+		"location": "Hempstead, NY, USA",
+		"description": "• Utilized Excel and SPSS to • conduct reliability analysis to more than 500 sets of various types of data collected from USA, China, Korea and Japan, including demographics, religious • beliefs, spiritual statuses, etc."
 	}
 ]
 };
@@ -50,7 +71,7 @@ $("#workExperience").append(HTMLworkStart);
 for (experience in workExperience.experiences)  {
 			var formattedEmployer = HTMLworkEmployer.replace ("%data%", workExperience.experiences[experience].employer);
 			var formattedTitle = HTMLworkTitle.replace ("%data%", workExperience.experiences[experience].title);
-			var formattedworkDates = HTMLworkDates.replace ("%data%", workExperience.experiences[experience].Date);
+			var formattedworkDates = HTMLworkDates.replace ("%data%", workExperience.experiences[experience].date);
 			var formattedworkLocation =  HTMLworkLocation.replace ("%data%", workExperience.experiences[experience].location);
 			var formattedDescription = HTMLworkDescription.replace ("%data%", workExperience.experiences[experience].description);
 			$(".work-entry").append(formattedEmployer + formattedTitle + formattedworkDates + formattedworkLocation + formattedDescription);
