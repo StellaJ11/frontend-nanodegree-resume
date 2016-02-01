@@ -20,7 +20,6 @@ var bio = {
 	"skills": "awesomeness"
 };
 
-
 var formattedMobile = HTMLmobile.replace ("%data%", bio.contacts.mobile);
 var formattedEmail = HTMLemail.replace ("%data%", bio.contacts.email);
 var formattedTwitter = HTMLtwitter.replace ("%data%", bio.contacts.twitter);
@@ -30,7 +29,10 @@ var formattedImage = HTMLbioPic.replace ("%data%", bio.bioPic);
 var formattedwelcomeMsg = HTMLwelcomeMsg.replace ("%data%", bio.welcomeMsg);
 var formattedskills = HTMLskills.replace ("%data%", bio.skills);
 $("#topContacts").append(formattedMobile + formattedEmail + formattedTwitter + formattedGithub + formattedLocation);
-$("#header").append(formattedImage + formattedwelcomeMsg + formattedskills);
+$("#header").append(formattedImage + formattedwelcomeMsg);
+$("#header").append(HTMLskillsStart);
+$("#header").append(formattedskills);
+
 
 var education = {
 	"schools": [
@@ -58,6 +60,14 @@ var education = {
 		}
 	]
 };
+	
+
+	$("#workExperience").append(HTMLworkStart);
+
+
+	$("#projects").append(HTMLprojectStart);
+
+
 
 	$("#education").append(HTMLschoolStart);
 		for (school in education.schools)  {
@@ -79,11 +89,6 @@ var education = {
 		    var formattedOnlineUrl = HTMLonlineURL.replace("%data%" , education.onlineCourses[onlineCourse].url);
 		    $(".education-entry:last").append(formattedOnlineTitleOnlineSchool + formattedOnlineDates + formattedOnlineUrl);
     }
-
-
-
-
-
 
 displayEducation();
 
