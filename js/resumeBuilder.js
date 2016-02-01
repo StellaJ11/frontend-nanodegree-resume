@@ -34,6 +34,33 @@ $("#header").append(HTMLskillsStart);
 $("#header").append(formattedskills);
 
 
+var workExperience = {
+	"experiences": [
+	{
+		"employer": "Smartling",
+		"title": "Digital Marketing Intern",
+		"Date": "06/15-12/15",
+		"location": "New York, NY",
+		"description": "• Managed various social media channels: Twitter, Facebook, LinkedIn, Google+ and You-Tube"
+	}
+]
+};
+
+$("#workExperience").append(HTMLworkStart);
+for (experience in workExperience.experiences)  {
+			var formattedEmployer = HTMLworkEmployer.replace ("%data%", workExperience.experiences[experience].employer);
+			var formattedTitle = HTMLworkTitle.replace ("%data%", workExperience.experiences[experience].title);
+			var formattedworkDates = HTMLworkDates.replace ("%data%", workExperience.experiences[experience].Date);
+			var formattedworkLocation =  HTMLworkLocation.replace ("%data%", workExperience.experiences[experience].location);
+			var formattedDescription = HTMLworkDescription.replace ("%data%", workExperience.experiences[experience].description);
+			$(".work-entry").append(formattedEmployer + formattedTitle + formattedworkDates + formattedworkLocation + formattedDescription);
+	}
+
+$("#projects").append(HTMLprojectStart);
+
+
+
+
 var education = {
 	"schools": [
 		{
@@ -61,14 +88,6 @@ var education = {
 	]
 };
 	
-
-	$("#workExperience").append(HTMLworkStart);
-
-
-	$("#projects").append(HTMLprojectStart);
-
-
-
 	$("#education").append(HTMLschoolStart);
 		for (school in education.schools)  {
 			var formattedName = HTMLschoolName.replace ("%data%", education.schools[school].name);
