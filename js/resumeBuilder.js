@@ -17,7 +17,11 @@ var bio = {
 	},
 	"bioPic": "images/me.jpg ",
 	"welcomeMsg": "Hello there!",
-	"skills": "awesomeness, creativeness, hardworking"
+	"skills": [
+		"HTML", 
+		"CSS", 
+		"JavaScript"
+	]
 };
 
 var formattedMobile = HTMLmobile.replace ("%data%", bio.contacts.mobile);
@@ -27,12 +31,19 @@ var formattedGithub = HTMLgithub.replace ("%data%", bio.contacts.github);
 var formattedLocation = HTMLlocation.replace ("%data%", bio.contacts.location);
 var formattedImage = HTMLbioPic.replace ("%data%", bio.bioPic);
 var formattedwelcomeMsg = HTMLwelcomeMsg.replace ("%data%", bio.welcomeMsg);
-var formattedskills = HTMLskills.replace ("%data%", bio.skills);
 $("#topContacts").append(formattedMobile + formattedEmail + formattedTwitter + formattedGithub + formattedLocation);
 $("#header").append(formattedImage + formattedwelcomeMsg);
-$("#header").append(HTMLskillsStart);
-$("#header").append(formattedskills);
 
+
+if (bio.skills.length > 0) {
+	$("#header").append(HTMLskillsStart);
+	var formattedskills = HTMLskills.replace ("%data%", bio.skills[0]); 
+	$("#skills").append(formattedskills);
+	formattedskills = HTMLskills.replace ("%data%", bio.skills[1]); 
+	$("#skills").append(formattedskills);
+	formattedskills = HTMLskills.replace ("%data%", bio.skills[2]); 
+	$("#skills").append(formattedskills);
+}
 
 var work = {
 	"jobs": [
