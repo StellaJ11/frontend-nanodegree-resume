@@ -52,7 +52,7 @@ var work = {
 		"title": "Digital Marketing Intern",
 		"date": "06/15-12/15",
 		"location": "New York, NY, USA",
-		"description": "• Managed various social media channels: Twitter, Facebook, LinkedIn, Google+ and You-Tube; in 5 months, the number of Twitter followers has been increased by 46.8% with 1,032 new followers; the number of Twitter engagements has been increased by 480.2% and the conversion rate from social media has been increased by 715.13%"
+		"description": "• Managed various social media channels: Twitter, Facebook, LinkedIn, Google+ and YouTube; in 5 months, the number of Twitter followers has been increased by 46.8% with 1,032 new followers; the number of Twitter engagements has been increased by 480.2% and the conversion rate from social media has been increased by 715.13%"
 	},
 	{
 		"employer": "justclickforkids.com",
@@ -66,32 +66,70 @@ var work = {
 		"title": "Business Development Intern",
 		"date": "10/14-12/14",
 		"location": "New York, NY, USA",
-		"description": "• Used Google Apps, Excel • and SugarCRM to conduct vital customer research; leads generated were increased by 25% in 2 months"
+		"description": "• Used Google Apps, Excel and SugarCRM to conduct vital customer research; leads generated were increased by 25% in 2 months"
 	},
 	{
 		"employer": "Hofstra University",
 		"title": "Research Assistant",
 		"date": "02/14-12/14",
 		"location": "Hempstead, NY, USA",
-		"description": "• Utilized Excel and SPSS to • conduct reliability analysis to more than 500 sets of various types of data collected from USA, China, Korea and Japan, including demographics, religious • beliefs, spiritual statuses, etc."
+		"description": "• Utilized Excel and SPSS to conduct reliability analysis to more than 500 sets of various types of data collected from USA, China, Korea and Japan, including demographics, religious beliefs, spiritual statuses, etc."
 	}
 ]
 };
 
-$("#workExperience").append(HTMLworkStart);
-for (job in work.jobs)  {
-			var formattedEmployer = HTMLworkEmployer.replace ("%data%", work.jobs[job].employer);
-			var formattedTitle = HTMLworkTitle.replace ("%data%", work.jobs[job].title);
-			var formattedworkDates = HTMLworkDates.replace ("%data%", work.jobs[job].date);
-			var formattedworkLocation =  HTMLworkLocation.replace ("%data%", work.jobs[job].location);
-			var formattedDescription = HTMLworkDescription.replace ("%data%", work.jobs[job].description);
-			$(".work-entry").append(formattedEmployer + formattedTitle + formattedworkDates + formattedworkLocation + formattedDescription);
+
+function displaywork () {
+	for (job in work.jobs)  {
+	//create new div for work experience
+	$("#workExperience").append(HTMLworkStart);
+	var formattedEmployer = HTMLworkEmployer.replace ("%data%", work.jobs[job].employer);
+	var formattedTitle = HTMLworkTitle.replace ("%data%", work.jobs[job].title);
+	//concat Employer and Title
+	var formattedEmployerTitle = formattedEmployer + formattedTitle;
+	var formattedworkDates = HTMLworkDates.replace ("%data%", work.jobs[job].date);
+	var formattedworkLocation =  HTMLworkLocation.replace ("%data%", work.jobs[job].location);
+	var formattedDescription = HTMLworkDescription.replace ("%data%", work.jobs[job].description);
+	$(".work-entry:last").append(formattedEmployerTitle + formattedworkDates + formattedworkLocation + formattedDescription);
 	}
+};
 
-$("#projects").append(HTMLprojectStart);
+displaywork();
 
 
+var projects = {
+	"samples": [
+	{
+		"title": "Sample Project 1",
+		"date": "12/15",
+		"description": "• Managed various social media channels: Twitter, Facebook, LinkedIn, Google+ and YouTube; in 5 months, the number of Twitter followers has been increased by 46.8% with 1,032 new followers; the number of Twitter engagements has been increased by 480.2% and the conversion rate from social media has been increased by 715.13%"
+	},
+	{
+		"title": "Sample Project 2",
+		"date": "01/16",
+		"description": "• Analyzed traffic patterns, executed organic keyword research and conducted SEO keyword strategies to improve website traffic and increase keyword ranking using Google Analytics and Google Webmaster Tools"
+	},
+	{
+		"title": "Sample Project 3",
+		"date": "02/16",
+		"description": "• Utilized Excel and SPSS to conduct reliability analysis to more than 500 sets of various types of data collected from USA, China, Korea and Japan, including demographics, religious beliefs, spiritual statuses, etc."
+	}
+]
+};
 
+
+function displayprojects() {
+	for (sample in projects.samples)  {
+	//create new div for project section
+	$("#projects").append(HTMLprojectStart);
+	var formattedprojectTitle = HTMLprojectTitle.replace ("%data%", projects.samples[sample].title);
+	var formattedprojectDates = HTMLprojectDates.replace ("%data%", projects.samples[sample].date);
+	var formattedprojectDescription = HTMLprojectDescription.replace ("%data%", projects.samples[sample].description);
+	$(".project-entry:last").append(formattedprojectTitle + formattedprojectDates + formattedprojectDescription);
+	}
+};
+
+displayprojects();
 
 var education = {
 	"schools": [
@@ -116,7 +154,6 @@ var education = {
 			"school": "Udacity",
 			"date": "2016",
 			"url": "https://www.udacity.com/course/viewer#!/c-ud304"
-
 		},
 		{
 		 	"title": "JavaScript Syntax",
@@ -133,26 +170,37 @@ var education = {
 	]
 };
 	
-	$("#education").append(HTMLschoolStart);
+	function displayeducation () {
 		for (school in education.schools)  {
+			$("#education").append(HTMLschoolStart);
 			var formattedName = HTMLschoolName.replace ("%data%", education.schools[school].name);
 			var formattedDegree = HTMLschoolDegree.replace ("%data%", education.schools[school].degree);
 			var formattedDates = HTMLschoolDates.replace ("%data%", education.schools[school].date);
 			var formattedLocation =  HTMLschoolLocation.replace ("%data%", education.schools[school].location);
 			var formattedMajor = HTMLschoolMajor.replace ("%data%", education.schools[school].major); 
-			$(".education-entry").append(formattedName + formattedDegree + formattedDates + formattedLocation + formattedMajor);
-	}
-
-	$("#education").append(HTMLonlineClasses);
-	$("#education").append(HTMLschoolStart);
+			$(".education-entry:last").append(formattedName + formattedDegree + formattedDates + formattedLocation + formattedMajor);
+		};
     	for (onlineCourse in education.onlineCourses) {
+    		$("#education").append(HTMLschoolStart);
+    		$("#education").append(HTMLonlineClasses);
     		var formattedOnlineTitle = HTMLonlineTitle.replace("%data%" , education.onlineCourses[onlineCourse].title);
 		    var formattedOnlineSchool = HTMLonlineSchool.replace("%data%" , education.onlineCourses[onlineCourse].school);
 		    var formattedOnlineTitleOnlineSchool = formattedOnlineTitle + formattedOnlineSchool;
 		    var formattedOnlineDates = HTMLonlineDates.replace("%data%" , education.onlineCourses[onlineCourse].date);
 		    var formattedOnlineUrl = HTMLonlineURL.replace("%data%" , education.onlineCourses[onlineCourse].url);
 		    $(".education-entry:last").append(formattedOnlineTitleOnlineSchool + formattedOnlineDates + formattedOnlineUrl);
-    }
+    	}
+    };
 
-displayEducation();
+	displayeducation();
 
+	function inName() {
+		var name = bio.name.trim().split(" ");
+		console.log(name);
+		name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
+		name[1] = name[1].toUpperCase();
+		return name[0] + " " + name[1];
+	};
+
+	
+	$("#main").append(internationalizeButton);
