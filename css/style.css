@@ -40,7 +40,6 @@ h2 {
 }
 
 h3 {
-  font-style: italic;
   font-size: 20px;
   color: #000;
   line-height: 22px;
@@ -61,7 +60,9 @@ h5 {
 
 }
 
-
+.role {
+  color:;
+}
 .date-text {
   font-style: italic;
   font-size: 14px;
@@ -93,7 +94,6 @@ a {
 }
 
 .welcome-message {
-  font-style: italic;
   font-size: 18px;
   color: #f3f3f3;
   line-height: 28px;
@@ -124,12 +124,12 @@ a {
 }
 
 .dark-gray {
-  background-color: #4a4a4a;
+  background-color: #123456;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #123456;
 }
 
 .flex-box {
