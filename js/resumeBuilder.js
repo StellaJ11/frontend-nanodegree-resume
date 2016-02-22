@@ -14,14 +14,16 @@ var bio = {
 		"email": "stella0101kong@gmail.com",
 		"twitter": "@sjiang_",
 		"github": "StellaJ11",
-		"location": "New York City"
+		"location": "Brooklyn, NY, USA"
 	},
 	"bioPic": "images/me.jpg ",
 	"welcomeMsg": "Hello there!",
 	"skills": [
 		"HTML", 
 		"CSS", 
-		"JavaScript"
+		"JavaScript",
+		"Web Analytics",
+		"Digital Marketing"
 	]
 };
 
@@ -43,6 +45,10 @@ if (bio.skills.length > 0) {
 	formattedskills = HTMLskills.replace ("%data%", bio.skills[1]); 
 	$("#skills").append(formattedskills);
 	formattedskills = HTMLskills.replace ("%data%", bio.skills[2]); 
+	$("#skills").append(formattedskills);
+	formattedskills = HTMLskills.replace ("%data%", bio.skills[3]); 
+	$("#skills").append(formattedskills);
+	formattedskills = HTMLskills.replace ("%data%", bio.skills[4]); 
 	$("#skills").append(formattedskills);
 }
 
@@ -124,7 +130,7 @@ var projects = {
 
 projects.display = function() {
 	for (sample in projects.samples)  {
-	//create new div for project section
+	//create new div for projects section
 	$("#projects").append(HTMLprojectStart);
 	var formattedprojectTitle = HTMLprojectTitle.replace ("%data%", projects.samples[sample].title);
 	$(".project-entry:last").append(formattedprojectTitle);
@@ -178,6 +184,7 @@ var education = {
 	
 education.display = function() {
 	for (school in education.schools)  {
+		//create new div for education section
 		$("#education").append(HTMLschoolStart);
 		var formattedName = HTMLschoolName.replace ("%data%", education.schools[school].name);
 		$(".education-entry:last").append(formattedName);
