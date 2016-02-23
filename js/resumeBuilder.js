@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var formattedName = HTMLheaderName.replace ("%data%", "Stella Jiang");
 var role = "Front-End Web Developer";
 var formattedRole = HTMLheaderRole.replace ("%data%", role);

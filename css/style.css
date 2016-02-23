@@ -40,9 +40,8 @@ h2 {
 }
 
 h3 {
-  font-style: italic;
   font-size: 20px;
-  color: #000;
+  color: #999;
   line-height: 22px;
 }
 
@@ -61,6 +60,11 @@ h5 {
 
 }
 
+.role {
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+}
 
 .date-text {
   font-style: italic;
@@ -93,8 +97,7 @@ a {
 }
 
 .welcome-message {
-  font-style: italic;
-  font-size: 18px;
+  font-size: 20px;
   color: #f3f3f3;
   line-height: 28px;
 }
@@ -102,6 +105,7 @@ a {
 #skills-h3 {
   color: #f5ae23;
   display: none;
+  font-size: 24px;
 }
 
 .orange {
@@ -115,6 +119,7 @@ a {
 .white-text {
   font-weight: bold;
   color: #fff;
+  font-size: 20px;
 }
 
 .gray {
@@ -124,12 +129,12 @@ a {
 }
 
 .dark-gray {
-  background-color: #4a4a4a;
+  background-color: #123456;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #123456;
 }
 
 .flex-box {
@@ -204,6 +209,7 @@ span {
   height: 400px;
   width: 100%;
   padding-bottom: 5%;
+  margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 750px) {
@@ -212,3 +218,37 @@ span {
     display: block;
   }
 }
+
+nav {
+    background-color: #f5a623;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 15px;
+}
+
+nav ul li  a {
+  color: #fff;
+}
+
+
+.center-text {
+  color: #fff;
+}
+
+#footerContacts {
+  padding: 20px;
+}
+
+#onlineclasses {
+  margin-top: 15px;
+}
+
+.project-entry {
+  margin-bottom: 10px;
+}
+

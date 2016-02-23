@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 
 This file contains all of the code running in the background that makes resumeBuilder.js possible. We call these helper functions because they support your code in this course.
@@ -248,3 +249,17 @@ window.addEventListener('resize', function(e) {
   //Make sure the map bounds get updated on page resize
 map.fitBounds(mapBounds);
 });
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
